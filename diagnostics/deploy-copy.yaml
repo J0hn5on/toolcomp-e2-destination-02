@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: restricted-config-consumer
+  namespace: research
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: restricted-config-consumer
+  template:
+    metadata:
+      labels:
+        app: restricted-config-consumer
+    spec:
+      containers:
+        - name: fixture
+          image: invalid.local/never-run:0
+          env:
+            - name: TOOLCOMP_SYNTHETIC_CLASSIFICATION
+              value: restricted
