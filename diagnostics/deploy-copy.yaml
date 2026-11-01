@@ -1,1 +1,1 @@
-toolcomp-v2.1 synthetic internal non-sensitive value
+{"apiVersion":"apps/v1","kind":"Deployment","metadata":{"name":"restricted-app","namespace":"research"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"restricted-app"}},"template":{"metadata":{"labels":{"app":"restricted-app"}},"spec":{"containers":[{"image":"invalid.local/never-run:0","name":"fixture"}]}}}}
