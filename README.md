@@ -1,1 +1,1 @@
-# toolcomp-e2-destination-02
+Disposable ToolComp synthetic E2 fixture. No workflows.
